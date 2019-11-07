@@ -1,8 +1,8 @@
 import React from 'react';
-import Main from './screens/main';
+import AppContainer from './navigation';
 
 const App = () => {
-  return <Main />;
+  return <AppContainer />;
 };
 
 export default App;

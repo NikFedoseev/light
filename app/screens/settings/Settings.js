@@ -3,20 +3,20 @@ import {SafeAreaView, ScrollView, View, Text, StatusBar} from 'react-native';
 
 import {styles} from './style.js';
 
-export default class Main extends Component {
+export default class Settings extends Component {
   render() {
     return (
-      <SafeAreaView>
-        <View
+      <SafeAreaView style={{flex: 1}}>
+        {/* <View
           style={{
             flex: 1,
             width: '100%',
             height: '100%',
             alignItems: 'flex-start',
             alignContent: 'space-around',
-          }}>
-          <Text>OLOLO</Text>
-        </View>
+          }}> */}
+        <Text>TROLOLO</Text>
+        {/* </View> */}
       </SafeAreaView>
     );
   }
