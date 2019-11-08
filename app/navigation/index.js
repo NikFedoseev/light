@@ -1,7 +1,9 @@
+import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faCog, faHeart} from '@fortawesome/free-solid-svg-icons';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import React from 'react';
 import {Text} from 'react-native';
 import LightButton from '../components/LightButton';
 
@@ -11,51 +13,42 @@ import {SETTINGS} from './routeNames';
 import Main from '../screens/main';
 import Settings from '../screens/settings';
 
-// const RootNavigation = createStackNavigator({
-//   [MAIN]: {
-//     screen: Main,
-//     navigationOptions: {
-//       header: null,
-//     },
-//   },
-//   [SETTINGS]: {
-//     screen: Settings,
-//     navigationOptions: {
-//       header: null,
-//     },
-//   },
-// });
-
 const TabNavigator = createBottomTabNavigator(
   {
     [MAIN]: {
       screen: Main,
       navigationOptions: {
-        tabBarIcon: () => <Text>Main</Text>,
+        tabBarIcon: ({focused, horizontal, tintColor}) => (
+          <FontAwesomeIcon icon={faCog} size={24} color={tintColor} />
+        ),
       },
     },
     Light: {
-      screen: () => null, // Empty screen
-      navigationOptions: () => ({
-        tabBarIcon: <LightButton />, // Plus button component
+      screen: () => null,
+      navigationOptions: ({navigation}) => ({
+        tabBarIcon: <LightButton />,
       }),
+      params: {navigationDisabled: true},
     },
     [SETTINGS]: {
       screen: Settings,
       navigationOptions: {
-        tabBarIcon: () => <Text>Settings</Text>,
+        tabBarIcon: ({focused, horizontal, tintColor}) => (
+          <FontAwesomeIcon icon={faHeart} size={24} color={tintColor} />
+        ),
       },
     },
   },
   {
     tabBarOptions: {
       showLabel: false, // hide labels
-      activeTintColor: '#F8F8F8', // active icon color
+      activeTintColor: '#4f6de5', // active icon color
       inactiveTintColor: '#586589', // inactive icon color
       style: {
         border: 'none',
-        backgroundColor: '#f2f6ff', // TabBar background
+        backgroundColor: '#f3f6ff', // TabBar background
       },
+      tabStyle: {},
     },
   },
 );
