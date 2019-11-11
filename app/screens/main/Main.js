@@ -7,7 +7,7 @@ import {styles} from './style.js';
 export default class Main extends Component {
   render() {
     return (
-      <SafeAreaView>
+      <SafeAreaView style={{flex: 1}}>
         <View
           style={{
             flex: 1,

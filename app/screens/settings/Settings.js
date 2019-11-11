@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SafeAreaView, ScrollView, View, Text, StatusBar} from 'react-native';
+import {SafeAreaView, TouchableOpacity, View, Text, TextInput, ScrollView} from 'react-native';
 
 import {styles} from './style.js';
 
@@ -7,16 +7,25 @@ export default class Settings extends Component {
   render() {
     return (
       <SafeAreaView style={{flex: 1}}>
-        {/* <View
-          style={{
-            flex: 1,
-            width: '100%',
-            height: '100%',
-            alignItems: 'flex-start',
-            alignContent: 'space-around',
-          }}> */}
-        <Text>TROLOLO</Text>
-        {/* </View> */}
+        <View
+          style={styles.container}>
+            <View style={styles.headerTextContainer}>
+              <Text style={styles.headerText}>Настройки</Text>
+            </View>
+            <View style={styles.inputsContainer} >
+              <View style={styles.textInputContainer}>
+                <TextInput placeholder="Адрес" editable style={styles.textInput}/>
+              </View>
+              <View style={styles.textInputContainer}>
+                <TextInput placeholder="Порт" editable style={styles.textInput}/>
+              </View>
+            </View>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.button}>
+                  <Text style={styles.buttonText}>Применить</Text>
+              </TouchableOpacity>
+            </View>
+        </View>
       </SafeAreaView>
     );
   }

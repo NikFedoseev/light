@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
 import {
   Animated,
-  TouchableHighlight,
   View,
-  SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import SvgComponent from '../../components/Icon';
 
-import {faCoffee, faPlus} from '@fortawesome/free-solid-svg-icons';
 import {styles} from './style';
 
 const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
@@ -59,6 +55,8 @@ class LightButton extends Component {
               width={48}
               height={48}
               fill={active ? 'yellow' : '#fff'}
+              strokeColor={active ? 'yellow' : '#fff'}
+              active={active}
             />
           </Animated.View>
         </AnimatedTouchable>

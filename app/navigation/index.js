@@ -1,14 +1,12 @@
 import React from 'react';
+import {createAppContainer} from 'react-navigation';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
+
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faCog, faHeart} from '@fortawesome/free-solid-svg-icons';
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
-import {Text} from 'react-native';
 import LightButton from '../components/LightButton';
 
-import {MAIN} from './routeNames';
-import {SETTINGS} from './routeNames';
+import {MAIN, SETTINGS} from './routeNames';
 
 import Main from '../screens/main';
 import Settings from '../screens/settings';
@@ -19,7 +17,7 @@ const TabNavigator = createBottomTabNavigator(
       screen: Main,
       navigationOptions: {
         tabBarIcon: ({focused, horizontal, tintColor}) => (
-          <FontAwesomeIcon icon={faCog} size={24} color={tintColor} />
+          <FontAwesomeIcon icon={faHeart} size={24} color={tintColor} />
         ),
       },
     },
@@ -34,7 +32,7 @@ const TabNavigator = createBottomTabNavigator(
       screen: Settings,
       navigationOptions: {
         tabBarIcon: ({focused, horizontal, tintColor}) => (
-          <FontAwesomeIcon icon={faHeart} size={24} color={tintColor} />
+          <FontAwesomeIcon icon={faCog} size={24} color={tintColor} />
         ),
       },
     },
