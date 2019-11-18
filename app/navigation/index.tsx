@@ -43,7 +43,7 @@ const TabNavigator = createBottomTabNavigator(
       activeTintColor: '#4f6de5', // active icon color
       inactiveTintColor: '#586589', // inactive icon color
       style: {
-        border: 'none',
+        // border: 'none',
         backgroundColor: '#f3f6ff', // TabBar background
       },
       tabStyle: {},

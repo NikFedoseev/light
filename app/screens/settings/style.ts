@@ -6,12 +6,14 @@ export const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'flex-end',
+        paddingBottom: "0%"
+
     },
     headerTextContainer: {
         width: "80%", 
-        position: "absolute", 
-        top: 50
+        // position: "absolute", 
+        // top: "10%"
     },
     headerText: {
         fontSize: 36, 
@@ -19,7 +21,8 @@ export const styles = StyleSheet.create({
     },
     inputsContainer: {
         width: "100%",
-        alignItems: "center"
+        alignItems: "center",
+        paddingTop: "20%",
     },
     textInputContainer: {
         width: "80%", 
@@ -30,7 +33,6 @@ export const styles = StyleSheet.create({
     textInput: {
         width: "100%", 
         height: 50, 
-        borderRadius: 1, 
         borderWidth: 1,
         borderRadius: 25,
         borderColor: "#969696",

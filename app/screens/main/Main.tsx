@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux'
 import {SafeAreaView, ScrollView, View, Text, StatusBar} from 'react-native';
 import SvgComponent from '../../components/Icon';
 
 import {styles} from './style.js';
 
-export default class Main extends Component {
+class Main extends Component {
   render() {
     return (
       <SafeAreaView style={{flex: 1}}>
@@ -23,3 +24,7 @@ export default class Main extends Component {
     );
   }
 }
+
+
+
+export default Main
